@@ -19,7 +19,7 @@ router.post('/product', auth, async (req, res, next) => {
 
             var indexCounter = 0
             product.images.forEach((image) => {
-                const url = 'http://localhost:3000/'
+                const url = 'https://hamdi1234.herokuapp.com/'
                 const path = 'products_images/' + product._id + '_' + indexCounter + '.png'
                 fs.writeFileSync(path, image, { encoding: "base64" })
                 product.images[indexCounter] = url + path
@@ -85,7 +85,7 @@ router.get('/product/:id', auth, async (req, res) => {
 })
 
 // Get product by owner 
-router.get('/product/owner/:id', auth, async (req, res, next) => {
+router.get('/productowner/:id', auth, async (req, res, next) => {
     const products = await Product.find({ owner: req.params.id })
 
     const filteredProducts = products.filter((product) => {
@@ -145,7 +145,7 @@ router.patch('/product/:id/images', auth, async (req, res) => {
         const newImages = req.body.images
         var indexCounter = 0
         newImages.forEach((image) => {
-            const url = 'http://localhost:3000/'
+            const url = 'https://hamdi1234.herokuapp.com/'
             const path = 'products_images/' + product._id + '_' + indexCounter + '.png'
             fs.writeFileSync(path, image, { encoding: "base64" })
             product.images[indexCounter] = url + path
