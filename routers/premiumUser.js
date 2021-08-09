@@ -2,7 +2,7 @@ const express = require('express')
 const router = new express.Router()
 const User = require('../modules/user')
 const PremiumUser = require('../modules/premiumUser')
-
+const auth = require('../middleware/auth')
 
 // premiumUser singning up
 router.post('/premiumUser', async (req, res) => {

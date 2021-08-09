@@ -1,8 +1,8 @@
 const express = require('express')
+const router = new express.Router()
 const User = require('../modules/user')
 const NormalUser = require('../modules/normalUser')
-const router = new express.Router()
-
+const auth = require('../middleware/auth')
 
 // normalUser singning up
 router.post('/normalUser', async (req, res) => {
