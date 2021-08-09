@@ -20,7 +20,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node app.js"
+    "start": "node index.js"
   },
   "author": "Daily Code Buffer",
   "license": "ISC"
