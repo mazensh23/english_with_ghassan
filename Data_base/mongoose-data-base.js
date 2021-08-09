@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 try {
-    mongoose.connect('mongodb://127.0.0.1:27017/ecommerce-api', {
+    mongoose.connect('mongodb://mazen:messi.10@cluster0-shard-00-00.jgelb.mongodb.net:27017,cluster0-shard-00-01.jgelb.mongodb.net:27017,cluster0-shard-00-02.jgelb.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-13vk6k-shard-0&authSource=admin&retryWrites=true&w=majority', {
         useNewUrlParser: true,
         useCreateIndex: true,
         useFindAndModify: false,
@@ -11,4 +11,3 @@ try {
 } catch (e) {
     console.log('Error Loading Data base')
 }
-
